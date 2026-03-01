@@ -305,9 +305,9 @@ a:hover { text-decoration: underline; }
 /* ===== Pricing ===== */
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  max-width: 560px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -541,6 +541,10 @@ details[open] > summary::after { transform: rotate(45deg); }
 .footer-links a:hover { color: var(--accent); text-decoration: none; }
 
 /* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 600px) {
   :root { --section-gap: 56px; }
 
